@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sora:wght@100..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #0A2D5E; /* deep navy */
+    --color-accent: #F47B20; /* bold orange */
+    --color-secondary: #1A9E5C; /* green */
+    --color-background: #F9F7F2; /* warm off-white */
+    --color-surface: #0D1B2A; /* dark surface */
+    --color-text: #1A1A2E;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-body text-text bg-background antialiased;
+  }
+}
+
+@layer utilities {
+  .clip-diagonal {
+    clip-path: polygon(0 0, 100% 5vw, 100% 100%, 0 calc(100% - 5vw));
+  }
+  .clip-diagonal-reverse {
+    clip-path: polygon(0 5vw, 100% 0, 100% calc(100% - 5vw), 0 100%);
+  }
+  .bg-dot-pattern {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 2px, transparent 2px);
+    background-size: 24px 24px;
+  }
+  .bg-dot-pattern-dark {
+    background-image: radial-gradient(circle, rgba(10, 45, 94, 0.1) 2px, transparent 2px);
+    background-size: 24px 24px;
+  }
+}
