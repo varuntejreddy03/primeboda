@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ShieldCheck, Truck, Clock, Target } from 'lucide-react';
+import { ShieldCheck, Clock, Target } from 'lucide-react';
 
 export default function About() {
   return (
