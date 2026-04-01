@@ -92,7 +92,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="relative h-64 rounded-xl overflow-hidden group shadow-xl">
-              <img src="https://images.unsplash.com/photo-1506146332389-bf81dc608e0f?auto=format&fit=crop&q=80&w=800" alt="Delivery Van" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&q=80&w=800" alt="Delivery Van" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A2D5E]/90 to-transparent flex flex-col justify-end p-6">
                 <h3 className="text-white font-display font-bold text-2xl mb-1">Modern Fleet</h3>
                 <div className="w-12 h-1 bg-accent"></div>
@@ -106,7 +106,7 @@ export default function Home() {
               </div>
             </div>
             <div className="relative h-64 rounded-xl overflow-hidden group shadow-xl">
-              <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&q=80&w=800" alt="Logistics" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=800" alt="Logistics Fast Delivery" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A2D5E]/90 to-transparent flex flex-col justify-end p-6">
                 <h3 className="text-white font-display font-bold text-2xl mb-1">Fast Delivery</h3>
                 <div className="w-12 h-1 bg-accent"></div>
