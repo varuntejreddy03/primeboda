@@ -10,8 +10,22 @@ export default function Footer() {
           
           {/* Brand Col */}
           <div className="space-y-6">
-            <Link to="/" className="flex items-center">
-              <img src="/assets/logo.png" alt="Prime Boda Services Limited" style={{ height: '60px', width: 'auto', filter: 'brightness(0) invert(1)' }} />
+            <Link to="/" className="flex items-center gap-4 group">
+              <div className="relative w-[80px] h-[52px] overflow-hidden flex-shrink-0 bg-white p-1 rounded">
+                <img 
+                  src="/logo-removebg-preview (1).png" 
+                  alt="Prime Boda Logo Icon" 
+                  className="absolute top-0 left-1/2 w-[90px] max-w-none -translate-x-1/2 transition-transform duration-300 group-hover:scale-105" 
+                />
+              </div>
+              <div className="flex flex-col pt-1">
+                <span className="font-display font-black text-[2rem] text-white tracking-[0.05em] leading-none transition-colors">
+                  PRIME BODA
+                </span>
+                <span className="font-display font-bold text-[0.8rem] text-white tracking-[0.18em] uppercase mt-1">
+                  SERVICES LIMITED
+                </span>
+              </div>
             </Link>
             <p className="text-base font-body text-slate-400 max-w-xs">
               Reliable. Dependable. Deliverable.

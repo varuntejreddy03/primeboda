@@ -1,31 +1,9 @@
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Truck, Clock, Users, ShieldCheck, Quote } from 'lucide-react';
 
-// Simple count up component (placeholder for a real hook if needed)
-function StatCard({ end, suffix, label }: { end: number, suffix: string, label: string }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  return (
-    <div ref={ref} className="text-center md:text-left space-y-2 p-[2rem_1.5rem] rounded-lg bg-surface relative overflow-hidden group">
-      <div className="absolute top-0 left-0 w-2 h-full bg-accent -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
-      <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-        <Truck className="w-24 h-24" />
-      </div>
-      <motion.h4 
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-[clamp(2.2rem,4vw,3rem)] font-display font-extrabold text-accent leading-none tracking-[-0.02em]"
-      >
-        {end}{suffix}
-      </motion.h4>
-      <p className="text-white font-body font-bold uppercase tracking-[0.2em] text-[0.7rem] opacity-70">{label}</p>
-    </div>
-  );
-}
 
 export default function Home() {
   const headlineWords = "Prime Boda Services Limited".split(" ");
@@ -109,14 +87,31 @@ export default function Home() {
         <div className="absolute bottom-0 w-full h-[5vw] bg-background clip-diagonal-top"></div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-[4rem] bg-background relative z-10 -mt-10">
+      {/* Visual Showcase */}
+      <section className="py-[4rem] bg-background relative z-10 -mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            <StatCard end={500} suffix="+" label="Fleet Vehicles" />
-            <StatCard end={13} suffix="+" label="Locations Covered" />
-            <StatCard end={50} suffix=",000+" label="Parcels Delivered Daily" />
-            <StatCard end={100} suffix="%" label="Customer Satisfaction" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="relative h-64 rounded-xl overflow-hidden group shadow-xl">
+              <img src="https://images.unsplash.com/photo-1506146332389-bf81dc608e0f?auto=format&fit=crop&q=80&w=800" alt="Delivery Van" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A2D5E]/90 to-transparent flex flex-col justify-end p-6">
+                <h3 className="text-white font-display font-bold text-2xl mb-1">Modern Fleet</h3>
+                <div className="w-12 h-1 bg-accent"></div>
+              </div>
+            </div>
+            <div className="relative h-64 md:h-72 rounded-xl overflow-hidden group shadow-xl md:-mt-8 z-10">
+              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" alt="Team" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A2D5E]/90 to-transparent flex flex-col justify-end p-6">
+                <h3 className="text-white font-display font-bold text-2xl mb-1">Dedicated Team</h3>
+                <div className="w-12 h-1 bg-accent"></div>
+              </div>
+            </div>
+            <div className="relative h-64 rounded-xl overflow-hidden group shadow-xl">
+              <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&q=80&w=800" alt="Logistics" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A2D5E]/90 to-transparent flex flex-col justify-end p-6">
+                <h3 className="text-white font-display font-bold text-2xl mb-1">Fast Delivery</h3>
+                <div className="w-12 h-1 bg-accent"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -234,8 +229,8 @@ export default function Home() {
       <section className="bg-accent py-[5rem] relative clip-diagonal">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-[clamp(2rem,4vw,3rem)] font-display font-black text-white uppercase tracking-[0.04em] mb-8 drop-shadow-lg leading-[1.1]">
-            We Have Delivery Job Vacancies<br/>All Over The Country
+          <h2 className="text-[clamp(1.8rem,3.5vw,2.5rem)] font-display font-black text-white uppercase tracking-[0.04em] mb-8 drop-shadow-lg leading-[1.2]">
+            We Have Delivery Job Vacancies<br/>All Over The Country<br/><span className="text-primary bg-white px-4 py-1 mt-2 inline-block rounded skew-x-[-10deg]">Only in UK</span>
           </h2>
           <Link to="/apply" className="inline-flex items-center justify-center px-10 py-5 bg-white text-primary font-black text-xl hover:scale-105 hover:shadow-2xl transition-all uppercase tracking-wide">
             Apply Now
