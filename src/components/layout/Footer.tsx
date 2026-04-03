@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
-import { Facebook, Instagram, Linkedin } from '../ui/Icons';
 
 export default function Footer() {
   return (
@@ -30,17 +29,6 @@ export default function Footer() {
             <p className="text-base font-body text-slate-400 max-w-xs">
               Reliable. Dependable. Deliverable.
             </p>
-            <div className="flex items-center gap-4 pt-4">
-              <a href="#" className="h-10 w-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-accent text-white transition-colors" aria-label="Facebook">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="h-10 w-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-accent text-white transition-colors" aria-label="Instagram">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="h-10 w-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-accent text-white transition-colors" aria-label="LinkedIn">
-                <Linkedin size={20} />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -87,7 +75,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-[0.875rem] leading-[1.9]">
                 <MapPin className="text-accent shrink-0 mt-2" size={18} />
-                <span>Flat 6, Park House, Staines Road, Feltham, TW14 8PA</span>
+                <span>6 Park house, Staines road, Feltham, TW148PA</span>
               </li>
               <li className="flex items-center gap-3 text-[0.875rem] leading-[1.9]">
                 <Phone className="text-accent shrink-0" size={18} />
@@ -105,8 +93,30 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm font-body">© 2024 Prime Boda Services Limited. All Rights Reserved.</p>
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <p className="text-sm font-body text-slate-500">
+            © 2026 <span className="text-white font-bold">Prime Boda Services Limited</span>. All Rights Reserved.
+          </p>
+          
+          <div className="flex items-center gap-4">
+            <span className="text-[0.65rem] font-black text-slate-500 uppercase tracking-[0.2em] mb-[-2px]">Design & Engineering</span>
+            <a 
+              href="https://staffarc.in" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 group transition-all"
+            >
+              <div className="flex items-center gap-2.5 bg-gradient-to-br from-white/10 to-white/5 px-4 py-2 rounded-xl border border-white/10 group-hover:border-accent/50 group-hover:shadow-[0_0_20px_rgba(244,123,32,0.2)] transition-all">
+                <img 
+                  src="https://www.staffarc.in/images/Staffarc-logo.png" 
+                  alt="StaffArc Logo" 
+                  className="h-5 w-auto object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity"
+                />
+                <div className="h-4 w-[1px] bg-white/20"></div>
+                <span className="text-[0.85rem] font-display font-black text-white tracking-widest uppercase group-hover:text-accent transition-colors">StaffArc</span>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </footer>

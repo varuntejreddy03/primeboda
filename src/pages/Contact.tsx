@@ -24,7 +24,13 @@ export default function Contact() {
   });
 
   const onSubmit: SubmitHandler<ContactFormValues> = (data) => {
-    console.log("Contact Message Sent:", data);
+    const message = `*New Contact Inquiry*%0A%0A` +
+      `*Name:* ${data.name}%0A` +
+      `*Email:* ${data.email}%0A` +
+      `*Phone:* ${data.phone}%0A` +
+      `*Message:* ${data.message}`;
+    
+    window.open(`https://wa.me/447884767823?text=${message}`, '_blank');
     setIsSubmitted(true);
   };
 
@@ -67,9 +73,9 @@ export default function Contact() {
                 <div>
                   <h4 className="text-sm font-bold text-slate-500 uppercase tracking-wide mb-1">Office Location</h4>
                   <p className="text-lg font-body text-primary font-bold">
-                    Flat 6, Park House<br />
-                    Staines Road<br />
-                    Feltham, TW14 8PA
+                    6 Park house<br />
+                    Staines road<br />
+                    Feltham, TW148PA
                   </p>
                 </div>
               </li>

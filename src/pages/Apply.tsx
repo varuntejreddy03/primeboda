@@ -39,7 +39,20 @@ export default function Apply() {
   });
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
-    console.log("Application Submitted:", data);
+    const message = `*Prime Boda Driver Application*%0A%0A` +
+      `*Name:* ${data.fullName}%0A` +
+      `*Email:* ${data.email}%0A` +
+      `*Phone:* ${data.phone}%0A` +
+      `*Address:* ${data.address.street}, ${data.address.city}, ${data.address.postcode}%0A%0A` +
+      `*Driving Details:* %0A` +
+      `- Licence: ${data.drivingLicence}%0A` +
+      `- Type: ${data.licenceType}%0A` +
+      `- Own Van: ${data.ownVan}%0A` +
+      `- Area: ${data.preferredArea}%0A%0A` +
+      `*Source:* ${data.source}%0A` +
+      `*Notes:* ${data.notes || 'None'}`;
+    
+    window.open(`https://wa.me/447884767823?text=${message}`, '_blank');
     setIsSubmitted(true);
   };
 
