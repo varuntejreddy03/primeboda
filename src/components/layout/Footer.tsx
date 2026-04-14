@@ -83,7 +83,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3 text-[0.875rem] leading-[1.9]">
                 <Mail className="text-accent shrink-0" size={18} />
-                <a href="mailto:v25janga@gmail.com" className="hover:text-accent transition-colors">v25janga@gmail.com</a>
+                <a href="mailto:venkateshj@primeboda.co.uk" className="hover:text-accent transition-colors">venkateshj@primeboda.co.uk</a>
               </li>
               <li className="flex items-start gap-3 text-[0.875rem] leading-[1.9]">
                 <Clock className="text-accent shrink-0 mt-2" size={18} />
